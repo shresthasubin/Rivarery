@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Page</title>
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- <header>
+        <h2 class="logo">logo</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header> -->
+    <!-- login-form  -->
+    <div class="wrapper active-popup">
+        <span class="icon-close"><a href="home.html" style="text-decoration: none; color:white;"><i class='bx bx-exit'></i></a></span>
+
+        <div class="form-box__login">
+            <h2>Login</h2>
+
+            <form action="#">
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bx-mail-send' ></i> </span>
+                   <input id="email"  type="email" required>
+                   <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                   <input id="password" type   ="password" required>
+                   <label>Password</label>
+                </div>
+
+                <div class="remember-forget">
+                    <label for="forget_psw1"> <input id="forget_psw1" type="checkbox">Remember Me</label>
+                    <a href="#">forget password?</a>
+                </div>
+                    <button type="submit" class="btn" onclick="getMeNext()">login</button>
+
+                <div class="login-register">
+                    <p>Dont have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+
+            </form>
+        </div>
+
+          
+        <div class="form-box__register">
+            <h2 style="color:white">Registration</h2>
+
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-user'></i> </span>
+                   <input type="text" required>
+                   <label>username</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                   <input id="password" type="password" required>
+                   <label>Password</label> 
+                </div>
+
+                <div class="remember-forget">
+                    <label for="forget_psw"> <input id="forget_psw" type="checkbox">agree to the terms & conditions</label>
+                </div>
+
+                <button type="submit" class="btn">Register</button>
+
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!-- login-form close  -->
+    <script>
+        let wrapper = document.querySelector('.wrapper');
+        let loginLink = document.querySelector('.login-link');
+        let registerLink = document.querySelector('.register-link');
+        let btnPopup = document.querySelector('.btnLogin-popup');
+        let iconClose = document.querySelector('.icon-close');
+        
+        registerLink.addEventListener('click', () => {
+            wrapper.classList.add('active');
+        });
+
+        loginLink.addEventListener('click', () => {
+            wrapper.classList.remove('active');
+        });
+
+        btnPopup.addEventListener('click', () => {
+            wrapper.classList.add('active-popup');
+        });
+
+        iconClose.addEventListener('click', () => {
+            wrapper.classList.remove('active-popup');
+        });
+        
+        function getMeNext(){
+            window.location.href="home.html";
+        }
+    </script>
+
+
+
+
+
+
+</body>
+</html>

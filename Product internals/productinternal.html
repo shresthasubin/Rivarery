@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Image Change</title>
+    <link rel = "stylesheet" href = "productinternal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class = "main-wrapper">
+        <div class = "container">
+            <div class = "product-div">
+                <div class = "product-div-left">
+                    <div class = "img-container">
+                        <img src = "https://www.watchshop.com/images/products/86903701_l_a3.jpg" alt = "watch">
+                    </div>
+                    <div class = "hover-container">
+                        <div><img src = "https://www.watchshop.com/images/products/86903701_l_a3.jpg"></div>
+                        <div><img src = "https://www.watchshop.com/images/products/86903701_l_a1.jpg"></div>
+                        <div><img src = "https://www.watchshop.com/images/products/86903701_l_a4.jpg"></div>
+                        <div><img src = "https://www.watchshop.com/images/products/86903701_l_a2.jpg"></div>
+                        <div><img src = "https://www.watchshop.com/images/products/86903701_l_a5.jpg"></div>
+                    </div>
+                </div>
+                <div class = "product-div-right">
+                    <span class = "product-name">(New) Analog Watch - For Men</span>
+                    <span class = "product-price">Rs 1000.00</span>
+                    <div class = "product-rating">
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class = "fas fa-star-half-alt"></i></span>
+                        <span>(4.5 ratings)</span>
+                    </div>
+                    <p class = "product-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae animi ad minima veritatis dolore. Architecto facere dignissimos voluptate fugit ratione molestias quis quidem exercitationem voluptas.</p>
+                    <div class = "btn-groups">
+                        <button onclick="alert('Item added to cart successfully')" = "button" class = "add-cart-btn"><i class = "fas fa-shopping-cart"></i>add to cart</button>
+                        <button type = "button" class = "buy-now-btn"><i class = "fas fa-wallet"></i>buy now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+   // Selects all thumbnail images inside the '.hover-container' div
+const allHoverImages = document.querySelectorAll('.hover-container div img');
+
+// Selects the main image element within the '.img-container' div
+const imgContainer = document.querySelector('.img-container img');
+
+// Adds an event listener to execute code after the DOM is fully loaded
+window.addEventListener('DOMContentLoaded', () => {
+    // Adds the 'active' class to the first thumbnail image's parent element
+    allHoverImages[0].parentElement.classList.add('active');
+});
+
+// Iterates through each thumbnail image to add hover functionality
+allHoverImages.forEach((image) => {
+    // Adds a 'mouseover' event listener to each thumbnail image
+    image.addEventListener('mouseover', () => {
+        // Updates the main image's 'src' attribute to match the hovered thumbnail's 'src'
+        imgContainer.src = image.src;
+        // Calls a function to reset the 'active' class for all thumbnails
+        resetActiveImg();
+        // Adds the 'active' class to the parent element of the currently hovered image
+        image.parentElement.classList.add('active');
+    });
+});
+
+// Function to remove the 'active' class from all thumbnail parent elements
+function resetActiveImg() {
+    // Iterates through each thumbnail image
+    allHoverImages.forEach((img) => {
+        // Removes the 'active' class from the parent element of the current image
+        img.parentElement.classList.remove('active');
+    });
+} 
+   
+    </script>
+</body>
+</html>

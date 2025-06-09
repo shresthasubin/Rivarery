@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivarery | Product</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font family  -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<!-- banner css  -->
+<style>
+    .slider_container {
+        width: 100vw;
+        margin: 76px auto;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .image_slider {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+        min-width: 100%;
+        height: 100%;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .navigation {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .prev,
+    .next {
+        background-color: rgb(37, 36, 36);
+        border-radius: 20%;
+        color: white;
+        border: none;
+        outline: none;
+        font-size: 1.1rem;
+        padding: 10px 25px;
+        cursor: pointer;
+    }
+</style>
+<!-- banner css ends -->
+
+<body>
+<!--Nav bar-->
+<header>
+    <a href="#" class="logo">
+    </a>
+
+    <ul class="navlist">
+        <li><a href="/Home/home.html">Home</a></li>
+        <li><a href="/Product/product.html">Product</a></li>
+        <li><a href="/Blog/blog.html">Blog</a></li>
+        <li><a href="/Research/Research.html">Research</a></li>
+        <li><a href="/AboutUs/AboutUs.html">About Us</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <div class="input-box">
+            <input type="text" id="input">
+            <span class="search">
+                <i class='bx bx-search'></i>
+            </span>
+            <i id="close" class="fa-solid fa-xmark"></i>
+        </div>
+        <a href="#"><i class='bx bx-cart-alt'></i></a>
+        <a href="login.html" class="btnLogin-popup"><i class='bx bx-user'></i></a>
+    </div>
+</header>
+<!-- nav-bar end  -->
+    <!-- banner slider  -->
+    <div class="slider_container">
+        <div class="image_slider">
+            <div class="slide"><img src="Banner-image/first111.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="Banner-image/Rado-watch.webp" alt="Image 2"></div>
+            <div class="slide"><img src="Banner-image/rolexBanner.jpg" alt="Image 3"></div>
+            <div class="slide"><img src="Banner-image/good.jpg" alt="Image 4"></div>
+            <div class="slide"><img src="Banner-image/omegaBanner.jpg" alt="Image 5"></div>
+        </div>
+        <div class="navigation">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+    <!-- banner slider ends -->
+    <!-- product items  -->
+    <section class="product-container">
+        <!-- Rolex  -->
+        <p>Rolex</p>
+        <div class="watch-container">
+        
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Rolex1.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Rolex</p>
+                    <p>Rolex Submarnier</p>
+                    <p>NRs. 4,13,000</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Rolex2.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Rolex</p>
+                    <p>Rolex Datejust</p>
+                    <p>NRs. 5,25,000</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Rolex3.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Rolex</p>
+                    <p>Rolex Sky-Dweller</p>
+                    <p>NRs. 2,73,000</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Rolex4.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Rolex</p>
+                    <p>Rolex Datejust</p>
+                    <p>NRs. 3,48,000</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Rado-->
+        <p>Rado</p>
+        <div class="watch-container">
+        
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Rado1.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Rado</p>
+                    <p>Rado HyperChrome</p>
+                    <p>NRs. 24,000</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Rado2.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Rado</p>
+                    <p>Rado True</p>
+                    <p>NRs. 15,000</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Rado3.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Rado</p>
+                    <p>Rado Centrix Chrono (Black & Gold)</p>
+                    <p>NRs.96,899</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Rado4.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Rado</p>
+                    <p>Rado Diamaster</p>
+                    <p>NRs. 2,56,099</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Omega -->
+        <p>Omega</p>
+        <div class="watch-container">
+        
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Omega1.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Omega</p>
+                    <p>Omega Speedmaster</p>
+                    <p>NRs. 2,23,000</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Omega2.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Omega</p>
+                    <p>Omega Seamaster</p>
+                    <p>NRs. 99,999</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Omega3.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Omega</p>
+                    <p>Omega De Ville</p>
+                    <p>NRs. 1,79,999</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Omega4.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Omega</p>
+                    <p>Omega Seamaster metal</p>
+                    <p>NRs. 1,19,950</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Cartier -->
+        <p>Cartier</p>
+        <div class="watch-container">
+        
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Cartier1.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Cartier</p>
+                    <p>Tank Louis Cartier</p>
+                    <p>NRs. 69,999</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Cartier2.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Cartier</p>
+                    <p>Panthere de Cartier</p>
+                    <p>NRs. 68,000</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Cartier3.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Cartier</p>
+                    <p>Ballon Bleu de Cartier</p>
+                    <p>NRs. 59,999</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Cartier4.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Cartier</p>
+                    <p>Drive de Cartier</p>
+                    <p>NRs. 44,000</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Seiko  -->
+        <p>Seiko</p>
+        <div class="watch-container">
+        
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Seiko1.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Seiko</p>
+                    <p>Seiko Presage</p>
+                    <p>NRs. 29,999</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Seiko2.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Seiko</p>
+                    <p>Seiko Prospex</p>
+                    <p>NRs. 18,000</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Seiko3.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Seiko</p>
+                    <p>Seiko Prospex</p>
+                    <p>NRs. 66,999</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Seiko4.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Seiko</p>
+                    <p>Seiko presage</p>
+                    <p>NRs. 62,057</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Tissot  -->
+        <p>Tissot</p>
+        <div class="watch-container">
+        
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Tissot1.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Tissot</p>
+                    <p>Tissot Le Locle</p>
+                    <p>NRs. 29,999</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Tissot2.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Tissot</p>
+                    <p>Tissot Le Locle</p>
+                    <p>NRs. 18,000</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Tissot3.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Tissot</p>
+                    <p>Tissot Carson</p>
+                    <p>NRs. 89,999</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image-div">
+                    <img src="product-images/Tissot4.png" alt="Cartier watch" class="image">
+                </div>
+                <div class="para-div">
+                    <p>Tissot</p>
+                    <p>Tissot PRX Chronograph</p>
+                    <p>NRs. 23,456</p>
+                    <button class="add-to-cart-button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </Section>
+    <!-- product items end  -->
+    <!-- footer start -->
+    <footer>
+        <div class="footer">
+    
+            <div class="website-detail">
+                <div class="logo"></div>
+                <p>Rivarery | a watch brand</p>
+                <p><i class="fa-regular fa-envelope"></i>&nbsp;rivarery@watchcollection.com</p>
+                <p><i class="fa-solid fa-location-dot"></i>&nbsp;Sundar Haraicha - 4, Morang</p>
+                <p><i class="fa-solid fa-phone"></i>&nbsp;9827320619 | 9746871051</p>
+            </div>
+            <div class="nav-page">
+                <p class="nav-head">Navigation Link</p>
+                <a href="/Product/product.html">Product</a>
+                <a href="/Blog/blog.html">Blog</a>
+                <a href="/AboutUs/AboutUs.html">About us</a>
+                <a href="/Research/Research.html">Research</a>
+            </div>
+            <div class="location">
+                <p>Location</p>
+                <a href="https://www.google.com/maps/place/Itahari+International+College/@26.6611386,87.3039316,14.98z/data=!4m6!3m5!1s0x39ef6ea070e7b18b:0x2959e2a3e2bf54e0!8m2!3d26.6554085!4d87.3019478!16s%2Fg%2F11tf6c33kn?entry=ttu&g_ep=EgoyMDI1MDEwNy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" class="location-image"></a>
+                <p>Get our location here.</p>
+            </div>
+            <div class="follow-us">
+                <p>Follow us on</p>
+                <div class="icon-container">
+                    <i class="fa-brands fa-linkedin linkedin"></i>
+                    <i class="fa-brands fa-x-twitter twitter"></i>
+                    <i class="fa-brands fa-square-facebook facebook"></i>
+                    <i class="fa-brands fa-instagram instagram"></i>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2025 All rights reserved</p>
+    
+    </footer>
+    <!-- footer end  -->
+
+<script src="nav-bar.js"></script>
+<!-- banner-slider js  -->
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideImage = document.querySelector('.image_slider');
+
+    function showSlide(index) {
+
+        //to insure  if the slide is within the bounds of the array slide
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        };
+        slideImage.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+    }
+
+    function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 2000); // Change slide every 3 seconds
+</script>
+<!-- banner slider js ends  -->
+</body>
+
+</html>

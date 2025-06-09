@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="/Research/nav.css" />
+    
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body{
+            font-family:' sans-serif';
+        }
+        /* for team member introduction */
+        .background {
+            padding-top: 50px;
+            position: relative;
+        }
+
+        .background_text {
+            position: absolute;
+            top:150px;
+            left: 200px;
+        }
+
+        .background img {
+           
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            /* line-height: 1.6; */
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: rgb(39, 36, 36);
+        }
+
+
+        .container_for_card {
+            max-width: 1500px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            /* gap: 1.5rem; */
+            gap: 100px;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid rgb(31, 29, 29);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            /* transform: translateY(-10px); */
+            transform: scale(1.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card i {
+            padding: 0 30px;
+            color: rgb(99, 77, 247);
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+
+        .card strong {
+            margin: 0;
+            padding: 0 16px;
+            font-size: 20px;
+            color: black;
+        }
+
+        .card p {
+            padding: 0 16px;
+        }
+
+        .hover_message {
+            opacity: 0;
+        }
+
+        .card:hover .hover_message {
+            opacity: 1;
+            color: red;
+        }
+/* Team member introduction  */
+     /* Animation @keyframes */
+@keyframes appear{
+  from{
+  opacity:0;
+  scale:0.5;
+  }
+  to{
+  opacity:1;
+  scale:1;
+}
+} 
+.content,.content-reverse{
+animation:appear linear;
+  animation-timeline:view();
+  animation-range:entry 0 cover 40%;
+}
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        body {
+            background-color:white;
+        }
+        .about {
+            width: 100%;
+            padding: 50px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            width: 1280px;
+            max-width: 95%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .content img {
+            max-width: 100%;
+            width: 700px;
+            height: 600px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .text {
+            max-width: 550px;
+            padding: 0 10px;
+        }
+        .text h1 {
+            color: #ffcc74;
+            font-size: 85px;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+        .text h5 {
+            color: white;
+            font-size: 25px;
+            margin-bottom: 25px;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+        }
+        .text p {
+            color: #c0c4d6;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 1px;
+            margin-bottom: 45px;
+        }
+        button {
+            background-color: #ffcc74;
+            color: black;
+            border: 2px solid transparent;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+        button:hover {
+            transform: scale(1.2);
+            background-color: transparent;
+            border: 2px solid #ffcc74;
+            color: #ffcc74;
+        }
+        .reverse {
+            flex-direction: row-reverse;
+        }
+ img{
+    mix-blend-mode: multiply;
+}
+        /* for team member introduction */
+    </style>
+</head>
+
+<body>
+   
+  
+    <!-- for nav bar -->
+      <!--Nav bar-->
+      <header>
+        <a  href="#" class="logo" id="logo-vid">
+        </a>
+    
+        <ul class="navlist">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="/Product/product.html">Product</a></li>
+            <li><a href="/Blog/blog.html">Blog</a></li>
+            <li><a href="/Research/Research.html">Research</a></li>
+            <li><a href="/AboutUs/AboutUs.html">About Us</a></li>
+        </ul>
+    
+        <div class="nav-right">
+            <div class="input-box">
+                <input type="text" id="input">
+                <span class="search">
+                    <i class='bx bx-search'></i>
+                </span>
+                <i id="close" class="fa-solid fa-xmark"></i>
+            </div>
+            <a href="#"><i class='bx bx-cart-alt'></i></a>
+            <a href="login.html" class="btnLogin-popup"><i class='bx bx-user'></i></a>
+        </div>
+    </header>
+    <!-- nav-bar end  -->
+    
+
+    <!-- for background -->
+    <section>
+        <div class="background">
+            <img src="/Images/AboutImages/GroupPhoto.jpeg" alt="image of team members in group">
+        </div>
+        <div class="background_text" style="font-size: 40px;">
+            <br/><br/><br><br>
+            <b>About us</b><br/><br/>
+            
+        <p>At Rivavery we provide Top notch Watch Brands</p></div>
+    </section>
+    <!-- for background -->
+
+
+    <!-- for introduction of company including mission -->
+    <section>
+        <div>
+            <h1 class="for_center">Why choose us?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione dolores perferendis, nulla ex
+                accusantium dolorum corporis! Illo suscipit non quos dolorum ducimus, nostrum, reprehenderit eius dolore
+                quidem minima totam id at molestiae nam impedit voluptatibus illum! Deleniti maxime laboriosam id est
+                expedita saepe illum quod dolorem. Quibusdam tenetur nisi explicabo!</p>
+            <!-- <img src="images/for watch3.png" alt="" width="400px"> -->
+            <!-- <ul style="list-style-type: square; padding-left: 20px;">
+                <li>Best watch quality.</li>
+                <li>watches services.</li>
+                <li>Modern accessories.</li>
+                <li>Watches in color.</li>
+            </ul> -->
+            <div class="mission_card">
+                <div class="child_mission_card">
+                    <img src="/Images/AboutImages/rating.jpg" alt="rating image">
+                    <h3>4.6 out of 5 stars</h3>
+                    <br />
+                    <p>from 69,000 rating world wide.</p>
+                </div>
+
+                <div class="child_mission_card">
+                    <img src="/Images/AboutImages/love.jpg" alt="watch image">
+                    <h3>9 million</h3>
+                    <br />
+                    <p>watch enthusiasts use <b>Riverary</b> each month.</p>
+                </div>
+
+                <div class="child_mission_card">
+                    <img src="/Images/AboutImages/handsake.jpg" alt="handshake image">
+                    <h3>Over 200,000 </h3>
+                    <br />
+                    <p>customers choose Buyer protection annually.</p>
+                </div>
+
+                <div class="child_mission_card">
+                    <img src="/Images/AboutImages/dealer.jpg" alt="dealer image">
+                    <h3>More than 25,000</h3>
+                    <br />
+                    <p>Trustworthy seller.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mission_container">
+            <div class="parent_mission">
+    
+                <div>
+                    <img src="/Images/AboutImages/OurMisson.jpg" alt="image of watches" style="width: 100%; height: 400px;">
+                </div>
+    
+                <div class="child_mission">
+                    <h1>Our mission</h1>
+                    <p>Our mission is to provide high-quality, stylish watches that combine beauty and durability. We aim to
+                        offer excellent customer service, ensuring satisfaction with affordable and well-crafted designs.
+                        Our goal is to help you feel confident and stylish every time you wear our watches.</p>
+                </div>
+            </div>
+    
+            <div class="parent_mission">
+                <div class="child_mission">
+                    <h1>Our services</h1>
+                    <p>Our services include offering a wide range of stylish and high-quality watches for every occasion. We
+                        provide secure online shopping, fast delivery, easy returns, and excellent customer support.</p>
+                </div>
+                <div> 
+                    <img src="/Images/AboutImages/OurServices.jpg" alt="image of services" style="width: 100%; height: 400px; ">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- for introduction of company including mission -->
+
+    <!-- for team members introduction  like a card-->
+    <section>
+        <!-- About us Informations -->
+    <!-- First Person -->
+    <section class="about">
+        <div class="content">
+            <div class="text">
+                <h1>Abiral Bista</h1>
+                <h5>Developer and Innovator</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam perspiciatis sed saepe maxime, quasi fugiat quia temporibus voluptatum tenetur molestiae deserunt reprehenderit odio nulla dolores minima dignissimos quod rem officia?</p>
+                <button type="button">Read More</button>
+            </div>
+            <img src="/Images/AboutImages/abibiral.png" alt="Image of Abiral">
+        </div>
+    </section>
+
+    <!-- Second Person -->
+    <section class="about">
+        <div class="content reverse">
+            <div class="text">
+                <h1>Dipen Limbu</h1>
+                <h5>Designer and Visionary</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam perspiciatis sed saepe maxime, quasi fugiat quia temporibus voluptatum tenetur molestiae deserunt reprehenderit odio nulla dolores minima dignissimos quod rem officia?</p>
+                <button type="button">Read More</button>
+            </div>
+            <img src="/Images/AboutImages/Dipen.jpeg" alt="Image of Dipen Limbu">
+        </div>
+  </section>
+      <!-- Third One-->
+      
+      <section class="about">
+        <div class="content">
+            <div class="text">
+                <h1>Prajwal Koirala</h1>
+                <h5>Developer and Innovator</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam perspiciatis sed saepe maxime, quasi fugiat quia temporibus voluptatum tenetur molestiae deserunt reprehenderit odio nulla dolores minima dignissimos quod rem officia?</p>
+                <button type="button">Read More</button>
+            </div>
+            <img src="/Images/AboutImages/prajwal.jpeg" alt="Image of Prajwal Koirala">
+        </div>
+  </section>
+      
+      
+      <!--fOURTH ONE-->
+      <section class="about">
+        <div class="content reverse">
+            <div class="text">
+                <h1>Subin Shrestha</h1>
+                <h5>Designer and Visionary</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam perspiciatis sed saepe maxime, quasi fugiat quia temporibus voluptatum tenetur molestiae deserunt reprehenderit odio nulla dolores minima dignissimos quod rem officia?</p>
+                <button type="button">Read More</button>
+            </div>
+            <img src="/Images/AboutImages/Subin.jpeg" alt="Image of Subin Shrestha">
+        </div>
+    </section>
+        <!--Fifth one-->
+        
+    <!-- First Person -->
+    <section class="about">
+        <div class="content">
+            <div class="text">
+                <h1>Sujal Shrestha</h1>
+                <h5>Developer and Innovator</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam perspiciatis sed saepe maxime, quasi fugiat quia temporibus voluptatum tenetur molestiae deserunt reprehenderit odio nulla dolores minima dignissimos quod rem officia?</p>
+                <button type="button">Read More</button>
+            </div>
+            <img src="/Images/AboutImages/Sujal.jpeg" alt="Image of Sujal Shrestha">
+        </div>
+    </section>
+
+        
+        
+    <!-- for team members introduction like a card -->
+
+    <!-- for feedback -->
+
+    <form>
+        <h2 class="for_center">Feedback form</h2>
+        
+        <div class="form">
+            <div class="form_left_side">
+                <img src="/Images/AboutImages/form-image.jpg" alt="image of mail">
+            </div>
+
+            <div class="form_right_side">
+                
+                <br /> <br />
+                <label for="name"></label>
+                <i class="fa-regular fa-user"></i>
+                <input type="text" name="name" placeholder="name">
+                <br /> <br />
+                <label for="email"></label>
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" name="email" placeholder="E-mail">
+                <br /> <br />
+                <textarea name="textarea" id="" placeholder="message"></textarea>
+                <br /> <br />
+                <div id="btn">
+                    <button onclick="alert('Your message has been received Thankyou!')">Send message</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- for feedback -->
+
+    <!-- for footer -->
+
+    <footer>
+        <div class="footer">
+
+            <div class="website-detail">
+                <div class="logo"></div>
+                <p>Rivarery | a watch brand</p>
+                <p><i class="fa-regular fa-envelope"></i>&nbsp;rivarery@watchcollection.com</p>
+                <p><i class="fa-solid fa-location-dot"></i>&nbsp;Sundar Haraicha - 4, Morang</p>
+                <p><i class="fa-solid fa-phone"></i>&nbsp;9827320619 | 9746871051</p>
+            </div>
+            <div class="nav-page">
+                <p class="nav-head">Navigation Link</p>
+                <a href="product.html">Product</a>
+                <a href="blog.html">Blog</a>
+                <a href="aboutus.html">About us</a>
+                <a href="research.html">Research</a>
+            </div>
+            <div class="location">
+                <p>Location</p>
+                <a href="https://www.google.com/maps/place/Itahari+International+College/@26.6611386,87.3039316,14.98z/data=!4m6!3m5!1s0x39ef6ea070e7b18b:0x2959e2a3e2bf54e0!8m2!3d26.6554085!4d87.3019478!16s%2Fg%2F11tf6c33kn?entry=ttu&g_ep=EgoyMDI1MDEwNy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" class="location-image"></a>
+                <p>Get our location here.</p>
+            </div>
+            <div class="follow-us">
+                <p>Follow us on</p>
+                <div class="icon-container">
+                    <i class="fa-brands fa-linkedin linkedin"></i>
+                    <i class="fa-brands fa-x-twitter twitter"></i>
+                    <i class="fa-brands fa-square-facebook facebook"></i>
+                    <i class="fa-brands fa-instagram instagram"></i>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2025 All rights reserved</p>
+
+    </footer>
+    <!-- for footer -->
+
+    <script src="script.js"></script>
+    
+
+</body>
+
+</html>
